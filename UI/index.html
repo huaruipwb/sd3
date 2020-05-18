@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        table {
+            border: 1px solid blue;
+            border-collapse: collapse;
+            text-align: center;
+            width: 100%;
+
+        }
+
+            table td {
+                border: 1px solid blue;
+                border-collapse: collapse;
+                text-align: center;
+            }
+    </style>
+</head>
+<body>
+    <div align="center">
+        <h1>我的微信红包记录</h1>
+    </div>
+    <div>
+        <table id="table1">
+            <thead>
+                <tr style="background-color:#747272">
+                    <td>品牌</td>
+                    <td>类型</td>
+                    <td>型号</td>
+                    <td>尺寸(英寸)</td>
+                    <td>操作</td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</body>
+</html>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script>
+    $(function () {
+        GetData();
+    });
+
+    function GetData() {
+        $.ajax({
+            type: "post",
+            url: "Service/PC_infoService.asmx/GetData",
+            data: null,
+            dataType: "json",
+            contentType: "application/json",
+            success: function (data) {
+                Gettable(data.d);
+            },
+            error: function (mse) {
+                alert("失败" + mse.responseText)
+            }
+        })
+    }
+    function Gettable(list) {
+        $("[name='dataTr']").remove();
+        $.each(list, function (index, v) {
+            if (index%2!= 0) {
+                var tr = $("<tr name=dataTr style='background-color:#d7d7d7';></tr>");
+            } else {
+                var tr = $("<tr name=dataTr></tr>");
+            }
+            var td1 = $("<td></td>").text(v.PC_brand);
+            var td2 = $("<td></td>").text(v.PC_type);
+            var td3 = $("<td></td>").text(v.PC_model);
+            var td4 = $("<td></td>").text(v.PC_size);
+            var td5 = $("<td></td>").html("<a href='xq.html?id=" + v.PC_id + "'>查看详情</a> <a href='#' name='del' id='" + v.PC_id + "' onclick='del(" + v.PC_id + ")' >删除</a>")
+            tr.append(td1, td2, td3, td4, td5)
+            $("#table1").append(tr);
+        })
+    }
+    function del(id) {
+        if (confirm("确定删除吗？")) {
+            $.ajax({
+                type: "post",
+                url: "Service/PC_infoService.asmx/Del",
+                data: JSON.stringify({ id: id }),
+                dataType: "json",
+                contentType: "application/json",
+                success: function (data) {
+                    if (data.d > 0) {
+                        GetData();
+                    } else {
+                        alert("(删除失败");
+                    }
+                },
+                error: function (mse) {
+                    alert("失败" + mse.responseText)
+                }
+            });
+        }
+    }
+</script>

@@ -1,0 +1,5 @@
+E:\寒假作业\计算机信息库\计算机信息库\Model\bin\Debug\Model.dll
+E:\寒假作业\计算机信息库\计算机信息库\Model\bin\Debug\Model.pdb
+E:\寒假作业\计算机信息库\计算机信息库\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+E:\寒假作业\计算机信息库\计算机信息库\Model\obj\Debug\Model.dll
+E:\寒假作业\计算机信息库\计算机信息库\Model\obj\Debug\Model.pdb

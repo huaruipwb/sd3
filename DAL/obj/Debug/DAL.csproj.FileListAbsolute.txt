@@ -1,0 +1,7 @@
+E:\寒假作业\计算机信息库\计算机信息库\DAL\bin\Debug\DAL.dll
+E:\寒假作业\计算机信息库\计算机信息库\DAL\bin\Debug\DAL.pdb
+E:\寒假作业\计算机信息库\计算机信息库\DAL\bin\Debug\Model.dll
+E:\寒假作业\计算机信息库\计算机信息库\DAL\bin\Debug\Model.pdb
+E:\寒假作业\计算机信息库\计算机信息库\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\寒假作业\计算机信息库\计算机信息库\DAL\obj\Debug\DAL.dll
+E:\寒假作业\计算机信息库\计算机信息库\DAL\obj\Debug\DAL.pdb

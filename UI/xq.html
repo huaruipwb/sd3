@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        table {
+            border: 1px solid blue;
+            border-collapse: collapse;
+            text-align: center;
+            width: 30%;
+        }
+
+            table td {
+                border: 1px solid blue;
+                border-collapse: collapse;
+                text-align: center;
+            }
+
+        input {
+            border: 0;
+        }
+    </style>
+
+</head>
+<body>
+    <div align="center">
+        <table>
+            <tr>
+                <td colspan="2"><h1><input type="text" style="text-align:center;" readonly="readonly" id="brand"></h1></td>
+            </tr>
+            <tr>
+                <td>类型</td>
+                <td><input type="text" readonly="readonly" id="type"></td>
+            </tr>
+            <tr>
+                <td>型号:</td>
+                <td><input type="text" readonly="readonly" id="model "></td>
+            </tr>
+            <tr>
+                <td>尺寸:</td>
+                <td><input type="text" readonly="readonly" id="size"></td>
+            </tr>
+            <tr>
+                <td>CPU:</td>
+                <td><input type="text" readonly="readonly" id="cpu"></td>
+            </tr>
+            <tr>
+                <td>内存:</td>
+                <td><input type="text" readonly="readonly" id="ram"></td>
+            </tr>
+            <tr>
+                <td>价格:</td>
+                <td><input type="text" readonly="readonly" id="price"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input id="Button1" type="button" value="返回首页" /></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script>
+    var id = 0;
+    $(function () {
+        id = window.location.href.split("=")[1];
+        GetDataById();
+        $("body").on("click", "#Button1", function () {
+            window.location.href ="index.html";
+        })
+    })
+    function GetDataById() {
+        var ID = id;
+        var jsonData = { ID: ID };
+        $.ajax({
+            type: "post",
+            url: "Service/PC_infoService.asmx/GetData2",
+            data: JSON.stringify({ pc: jsonData }),
+            dataType: "json",
+            contentType: "application/json",
+            success: function (data) {
+                console.log(data);
+                $("#brand").val(data.d[0].PC_brand);
+                $("#type").val(data.d[0].PC_type);
+                $("#model ").val(data.d[0].PC_model);
+                $("#size").val(data.d[0].PC_size);
+                $("#cpu").val(data.d[0].PC_cpu);
+                $("#ram").val(data.d[0].PC_ram);
+                $("#price").val(data.d[0].PC_price);
+            },
+            error: function (mes) {
+                alert(mes.responseText);
+            }
+        });
+    }
+</script>

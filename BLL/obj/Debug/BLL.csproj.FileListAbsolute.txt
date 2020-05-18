@@ -1,0 +1,9 @@
+E:\寒假作业\计算机信息库\计算机信息库\BLL\bin\Debug\BLL.dll
+E:\寒假作业\计算机信息库\计算机信息库\BLL\bin\Debug\BLL.pdb
+E:\寒假作业\计算机信息库\计算机信息库\BLL\bin\Debug\DAL.dll
+E:\寒假作业\计算机信息库\计算机信息库\BLL\bin\Debug\Model.dll
+E:\寒假作业\计算机信息库\计算机信息库\BLL\bin\Debug\DAL.pdb
+E:\寒假作业\计算机信息库\计算机信息库\BLL\bin\Debug\Model.pdb
+E:\寒假作业\计算机信息库\计算机信息库\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+E:\寒假作业\计算机信息库\计算机信息库\BLL\obj\Debug\BLL.dll
+E:\寒假作业\计算机信息库\计算机信息库\BLL\obj\Debug\BLL.pdb

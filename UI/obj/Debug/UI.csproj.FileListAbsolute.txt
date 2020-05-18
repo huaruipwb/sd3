@@ -1,0 +1,12 @@
+E:\寒假作业\计算机信息库\计算机信息库\UI\bin\UI.dll.config
+E:\寒假作业\计算机信息库\计算机信息库\UI\bin\UI.dll
+E:\寒假作业\计算机信息库\计算机信息库\UI\bin\UI.pdb
+E:\寒假作业\计算机信息库\计算机信息库\UI\bin\BLL.dll
+E:\寒假作业\计算机信息库\计算机信息库\UI\bin\Model.dll
+E:\寒假作业\计算机信息库\计算机信息库\UI\bin\DAL.dll
+E:\寒假作业\计算机信息库\计算机信息库\UI\bin\BLL.pdb
+E:\寒假作业\计算机信息库\计算机信息库\UI\bin\Model.pdb
+E:\寒假作业\计算机信息库\计算机信息库\UI\bin\DAL.pdb
+E:\寒假作业\计算机信息库\计算机信息库\UI\obj\Debug\UI.csprojResolveAssemblyReference.cache
+E:\寒假作业\计算机信息库\计算机信息库\UI\obj\Debug\UI.dll
+E:\寒假作业\计算机信息库\计算机信息库\UI\obj\Debug\UI.pdb
